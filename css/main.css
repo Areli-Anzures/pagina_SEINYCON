@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     box-sizing: border-box;
 }
@@ -80,22 +80,24 @@ a {
 .container {
     width: auto;
 }
+
 /*Estilos del main: Página de inicio*/
 /*mensaje principal*/
 #contenido-inicio {
-    margin: 152px 0px 0px 0px;
+    margin: 152px 0px 0px 0px !important;
     background-image: url(../images/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
     height: 250px;
 }
 
 #contenido-inicio p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    margin: 100px 0px 0px 0px;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgba(0, 0, 0, 0.527);
-    width: 100%;
+    margin: 100px 0px 0px 0px !important;
 }
 
 /*se agrega una animacion*/
@@ -129,15 +131,20 @@ a {
     }
 }
 
-.main-nuestro-trabajo {
-    margin: 155px 0px 0px 0px;
+.main-nuestro-trabajo .container {
+    margin: 130px 0px 0px 0px !important;
 }
+
 /*h3 de nuestro trabajo*/
 .main-nuestro-trabajo h3 {
     color: rgb(33, 20, 156);
 }
 
-#proy-est, #proy-arq, #proy-cons, #proy-mant, #proy-planos {
+#proy-estruc,
+#proy-arq,
+#proy-cons,
+#proy-mant,
+#proy-planos {
     background-color: rgb(233, 231, 231);
     margin: 10px 2px 2px 0px;
     padding: 0px 5px;
@@ -149,13 +156,13 @@ a {
 }
 
 /*imagenes del mismo tamaño*/
-#proy-est img,
+#proy-estruc img,
 #proy-arq img,
 #proy-cons img,
 #proy-mant img,
 #proy-planos img {
-    height: 250px;
-    width: 100%;
+    height: 150px;
+    width: 250px;
 }
 
 /*Estilos de Galería*/
@@ -263,28 +270,92 @@ a {
     color: #fff;
 }
 
-/*Estilos para página de contacto*/
-.main-contacto {
-    padding: 135px 0px 25px 0px;
-    height: auto;
+    /*Estilos para página de contacto*/
+    .main-contacto {
+        padding: 135px 0px 25px 0px;
+        height: auto;
+        width: 100%;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    #contacto-cons {
+        background-image: url(../images/fondo2.jpg);
+        background-size: 200px;
+    }
 
-/*Color de fondo para el formulario*/
-.contacto-formulario {
-    background-color: rgb(233, 231, 231);
-    margin: 10px;
-    padding: 40px;
+    #contacto-cons img {
+        height: 300px;
+        width: 300px;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 15px 25px;
-    border-radius: 10px;
-}
+    #contacto-des {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        background-image: url(../images/fondo2.jpg);
+        background-size: 200px;
+    }
+
+    #contacto-des p {
+        text-align: left;
+        background-color: #ffffffde;
+        animation: entrar3 5s infinite;
+    }
+
+    @keyframes entrar3 {
+        0% {
+            margin-right: 10000px;
+        }
+    
+        20% {
+            margin-right: 10000px;
+        }
+    
+        25% {
+            margin-right: 0px;
+        }
+    
+        50% {
+            margin-right: 0px;
+        }
+    
+        75% {
+            margin-right: 0px;
+        }
+    
+        100% {
+            margin-right: 0px;
+        }
+    }
+
+    #contacto-des h2 {
+        background-color: #ffffffde;
+    }
+
+    #contacto-info {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #contacto-info p {
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /*Color de fondo para el formulario*/
+    #contacto-form {
+        background-color: rgb(233, 231, 231);
+        margin: 10px;
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 15px 25px;
+        border-radius: 10px;
+    }
 
 /*Pie de página*/
 footer {
@@ -354,93 +425,18 @@ p {
         height: 55px;
         position: fixed;
         width: 100%;
-
-
     }
 
     /*Estilos del main: Página de inicio*/
-    .contenido-inicio p {
-        font-size: 40px;
-        text-align: center;
-    }
-
-    /*imagenes del mismo tamaño*/
-    #proy-1 img,
-    #proy-2 img,
-    #proy-3 img,
-    #proy-4 img,
-    #est-1 img,
-    #est-2 img {
-        height: 450px;
+    #contenido-inicio {
+        height: 400px;
         width: auto;
     }
 
-    /*Imagenes de Nuestro Trabajo pagina inicio*/
-    .trabajo-inicio {
-        grid-area: trabajo-inicio;
-
-        display: grid;
-        grid-template-areas:
-            "tit-inicio tit-inicio"
-            "descrip-inicio descrip-inicio"
-            "proy-1 proy-2"
-            "proy-3 proy-4";
-        margin: 15px 20px 10px 20px;
-    }
-
-    .tit-inicio {
-        grid-area: tit-inicio;
+    .contenido-inicio p {
+        font-size: 40px;
         text-align: center;
-    }
-
-    .descrip-inicio {
-        grid-area: descrip-inicio;
-        text-align: center;
-    }
-
-    #proy-1 {
-        grid-area: proy-1;
-    }
-
-    #proy-2 {
-        grid-area: proy-2;
-    }
-
-    #proy-3 {
-        grid-area: proy-3;
-    }
-
-    #proy-4 {
-        grid-area: proy-4;
-    }
-
-    .trabajo-inicio img {
-        height: 450px;
-        width: 650px;
-    }
-
-    /*Informacion de proyectos en Inicio*/
-    .proyectos-inicio {
-        grid-area: proyectos-inicio;
-
-        display: grid;
-        grid-template-areas:
-            "texto"
-            "imagenes";
-
-        margin: 0px 20px 10px 20px;
-    }
-
-    .texto {
-        grid-area: texto;
-    }
-
-    .imagenes {
-        grid-area: imagenes;
-
-        display: flex;
-        padding: 0px 0px 0px 50px;
-        align-items: center;
+        margin: 400px 0px 0px 0px !important;
     }
 
     .proyectos-inicio img {
@@ -449,65 +445,43 @@ p {
     }
 
     /*Estilos de la página Nuestro Trabajo*/
-    .main-nuestro-trabajo {
-        grid-area: main;
-
-        padding: 120px 0px 0px 0px;
-
-        display: grid;
-        grid-template-areas:
-            "proy-estructurales proy-arquitectonicos"
-            "proy-construccion proy-mantenimiento"
-            "proy-elaboracion-planos proy-elaboracion-planos"
-        ;
+    .main-nuestro-trabajo .container {
+        margin: 0px !important;
     }
 
-    /*h3 de nuestro trabajo*/
-    .main-nuestro-trabajo h3 {
-        color: rgb(33, 20, 156);
+    .main-nuestro-trabajo .container {
+        width: 100%;
     }
 
-    /*Contendo de la página tipo flex*/
-    .proy-estructurales,
-    .proy-arquitectonicos,
-    .proy-construccion,
-    .proy-mantenimiento {
-        background-color: rgb(233, 231, 231);
-        margin: 15px 30px 0px 30px;
+    #proy-estruc,
+    #proy-arq,
+    #proy-cons,
+    #proy-mant,
+    #proy-planos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
     }
 
-    /*Imagenes del mismo tamaño*/
+    #proy-estruc img,
+    #proy-arq img,
+    #proy-cons img,
+    #proy-mant img,
+    #proy-planos img {
+        height: 300px;
+        width: 500px;
+    }
+
     .main-nuestro-trabajo img {
-        height: 358px;
-        width: 420px;
-    }
-
-    .img-proy img {
         cursor: pointer;
         transition: all 500ms ease-out;
     }
 
     /*Se agregan animaciones en las imagenes*/
-    .img-proy a:hover>img {
+    .main-nuestro-trabajo div:hover>img {
         transform: scale(1.3);
     }
 
-    /*Ajustar la ultima imagen en medio y da el mismo formato a anterior*/
-    .proy-elaboracion-planos {
-        grid-area: proy-elaboracion-planos;
-        background-color: rgb(233, 231, 231);
-        margin: 25px 0px 0px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        box-shadow: 0px 15px 25px;
-        border-radius: 10px;
-    }
 
     /*Se agregan animaciones en las imagenes*/
     .main-nuestro-trabajo section:hover>img {
@@ -665,6 +639,35 @@ p {
         width: 800px;
     }
 
+    /*Estilos para página de contacto*/
+    .main-contacto {
+        padding: 135px 0px 25px 0px;
+        height: auto;
+        width: auto;
+    }
+
+    #contacto-cons {
+        background-image: url(../images/fondo2.jpg);
+        background-size: 200px;
+    }
+
+    #contacto-cons img {
+        height: 400px;
+        width: 400px;
+    }
+
+    #contacto-info {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    #contacto-info p {
+        height: 50px;
+        font-size: 20px;
+    }
+
     /*Pie de página*/
     footer {
         height: 70px;
@@ -677,6 +680,7 @@ p {
     /*Color del titulo de las páginas*/
     h1 {
         font-size: 35px;
+        text-align: center;
     }
 
     /*color, tamaño y tipo de letra de h2*/
@@ -749,72 +753,14 @@ p {
     }
 
     /*Estilos de la página Nuestro Trabajo*/
-    .main-nuestro-trabajo {
-        grid-area: main;
-
-        padding: 135px 0px 0px 0px;
-
-        display: grid;
-        grid-template-areas:
-            "proy-estructurales proy-arquitectonicos"
-            "proy-construccion proy-mantenimiento"
-            "proy-elaboracion-planos proy-elaboracion-planos"
-        ;
+    .main-nuestro-trabajo .container {
+        margin: 120px 0px 0px 0px !important;
     }
 
     /*h3 de nuestro trabajo*/
     .main-nuestro-trabajo h3 {
         color: rgb(33, 20, 156);
     }
-
-    /*Contendo de la página tipo flex*/
-    .proy-estructurales,
-    .proy-arquitectonicos,
-    .proy-construccion,
-    .proy-mantenimiento {
-        grid-area: proy-estructurales;
-        background-color: rgb(233, 231, 231);
-        margin: 25px 50px 0px 50px;
-        /*padding: 50px;*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    /*Imagenes del mismo tamaño*/
-    .main-nuestro-trabajo img {
-        height: 258px;
-        width: 420px;
-    }
-
-    .proy-arquitectonicos {
-        grid-area: proy-arquitectonicos;
-
-    }
-
-    .proy-construccion {
-        grid-area: proy-construccion;
-
-    }
-
-    .proy-mantenimiento {
-        grid-area: proy-mantenimiento;
-
-    }
-
-    /*Ajustar la ultima imagen en medio y da el mismo formato a anterior*/
-    .proy-elaboracion-planos {
-        grid-area: proy-elaboracion-planos;
-        background-color: rgb(233, 231, 231);
-        margin: 25px 150px 25px 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-    }
-
 
     /*Estilos página nosotros*/
     .main-nosotros {
@@ -901,6 +847,23 @@ p {
         font-size: 80px;
         text-align: center;
         color: #fff;
+    }
+
+    /*Estilos para página de contacto*/
+    .main-contacto {
+        width: auto;
+    }
+
+    #contacto-info {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    #contacto-info p {
+        height: 30px;
+        font-size: 15px;
     }
 
     footer i {

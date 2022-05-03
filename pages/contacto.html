@@ -22,8 +22,6 @@
     <div class="contenedor-pagina">
         <!-- Encabezado de pagina -->
         <header>
-            <!--Agrega logo-->
-            <h1>SEINYCON</h1>
             <!--titulo de pagina -->
             <h1>Servicios de Ingeniería y Construcción</h1>
             <!--Barra de navegación -->
@@ -54,28 +52,46 @@
 
         <!--Inicio de cuerpo de pagina -->
         <main class="main-contacto">
-            <section class="contacto-formulario">
-                <h2 id="inicio-form">Deja tus datos para una cotización</h2>
-                <form action="">
-                    <div class="contacto-correo">
-                        <label for="">Correo</label>
-                        <input type="text">
+            <div class="container overflow-hidden">
+                <div class="row gy-5 p-2">
+                    <div class="col-sm-12 col-md-6 col-lg-6" id="contacto-cons">
+                        <img src="../images/constructor.png" alt="">
                     </div>
-                    <div class="contacto-nombre">
-                        <label for="">Nombre</label>
-                        <input type="text">
+                    <div class="col-sm-12 col-md-6 col-lg-6 animacion" id="contacto-des">
+                        <h2>¡Contactanos y construyamos el éxito!</h2>
+                        <p>Ponte en contacto con nuestros expertos para hacerte una cotización que se ajuste a tus
+                            necesidades.</p>
+                        <p>Preguntanos como podemos ayudarte, te damos una asesoria sin costo.</p>
                     </div>
-                    <div class="contacto-cotizacion">
-                        <label for="">Cotización</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <div class="col-sm-12 col-md-12 col-lg-12 p-3" id="contacto-info">
+                        <i class="fa-solid fa-people-robbery fa-3x"></i>
+                        <span><p class="badge rounded-pill bg-success">Calidad en el servicio al cliente</p></span>
+                        <i class="fa-solid fa-building-circle-check fa-3x"></i>
+                        <span><p class="badge rounded-pill bg-success">Cumplimos las normas</p></span>
+                        <i class="fa-solid fa-5 fa-3x"></i>
+                        <span><p class="badge rounded-pill bg-success">Años de experiencia</p></span>
+                        
                     </div>
-                    <input type="button" value="Enviar" n>
-                </form>
-            </section>
-            <section class="contacto-descrip">
-                <p>Contáctanos hoy mismo para una cotización.</p>
-                <p>En breve nos comunicarémos contigo.</p>
-            </section>
+                    <div class="col-sm-12 col-md-12 col-lg-12 p-3" id="contacto-form">
+                        <h2 id="inicio-form">Deja tus datos para una cotización</h2>
+                        <form action="">
+                            <div class="contacto-correo">
+                                <label for="">Correo</label>
+                                <input type="text">
+                            </div>
+                            <div class="contacto-nombre">
+                                <label for="">Nombre</label>
+                                <input type="text">
+                            </div>
+                            <div class="contacto-cotizacion">
+                                <label for="">Cotización</label>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <input type="button" value="Enviar" n>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
         <!--Fin de cuerpo de pagina -->
 
