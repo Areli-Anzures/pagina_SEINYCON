@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../images/logo.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Se incluyen algunos iconos-->
+    <script src="https://kit.fontawesome.com/c826670069.js" crossorigin="anonymous"></script>
+    <!--Link css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Se agregan los estilos-->
+    <link rel="stylesheet" href="../css/main.css">
+    <!--Titulo de la página-->
+    <title>Galería</title>
+</head>
+
+<body>
+
+    <div class="contenedor-pagina">
+        <!-- Encabezado de pagina -->
+        <header>
+            <!--Agrega logo-->
+            <h1>SEINYCON</h1>
+            <!--titulo de pagina -->
+            <h1>Servicios de Ingeniería y Construcción</h1>
+            <!--Barra de navegación -->
+        </header>
+        <!-- Fin de Encabezado de pagina -->
+
+        <!--Inicio barra de navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dc3545;">
+            <div class="container-fluid">
+                <h3>SEINYCON</h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active aria-current=" page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="nuestro-trabajo.html">Nuestro Trabajo</a>
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--Fin barra de navegacion-->
+
+        <!--Inicio de cuerpo de pagina -->
+        <main class="main-galeria">
+            <!--Se agregan imagenes y descripcion-->
+            <section class="galeria-modelamiento">
+                <h2 class="titulo" id="tit1">Modelamiento de Edificio</h2>
+                <p class="descrip" id="descrip1"> Modelamiento de edificio de departamentos de 6 niveles con sótano y
+                    semisotano, ya listo para
+                    ingresar cargas y acciones sísmicas.
+                    La estructuración en los sótanos es a base de muros y columnas de concreto, mientras que los niveles
+                    superiores son a base de mampostería, este edificio tiene la particularidad de que el semisotano
+                    donde se encuentra el estacionamiento se denomina "planta débil" ya que cuenta con muy pocos
+                    elementos que den mayor rigidez ante sismo.
+                </p>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" id="c1">
+                            <img src="../images/construccion1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" id="c2">
+                            <img src="../images/construccion2.jpg." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" id="c3">
+                            <img src="../images/construccion3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" id="c4">
+                            <img src="../images/construccion4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="galeria-ref-tanque">
+                <h2 class="titulo" id="tit2">Proyecto de Revisión</h2>
+                <p class="descrip" id="descrip2"> Proyecto de revisión y reforzamiento de tanque elevado de agua
+                    potable, es una estructura cuyo
+                    principal problema ha sido la falta de mantenimiento y esto ha traído consigo problemas como
+                    desprendimiento de recubrimiento y oxidación en el acero de refuerzo, se realizara un análisis para
+                    revisar el estado con la nueva normativa de la ciudad sin embargo al ser una estructura construida
+                    en los años 90's, requerirá un proyecto de reforzamiento y reparación de las secciones dañadas.
+                </p>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" id="t1">
+                            <img src="../images/tanque.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" id="t2">
+                            <img src="../images/tanque2.jpg." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" id="t3">
+                            <img src="../images/tanque4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="galeria-ref-edificio">
+                <h2 class="titulo" id="tit3">Proyecto de Reforzamiento</h2>
+                <p class="descrip" id="descrip3">Trabajando en proyectos de reforzamiento para un edificio con uso de
+                    oficinas existente en la CDMX,
+                    empezamos a revisar las condiciones actuales, para determinar la mejor opción de reforzamiento ya
+                    sea mediante muros de concreto o con elementos metálicos.</p>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="e1">
+                                <img src="../images/edificio1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" id="e2">
+                                <img src="../images/edificio2.jpg." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" id="e3">
+                                <img src="../images/edificio3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" id="e4">
+                                <img src="../images/edificio4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="galeria-revision-edificios">
+                <h2 class="titulo" id="tit4">Revisión de Edificios</h2>
+                <p class="descrip" id="descrip4">Continuando con la revisión de edificios, los tres forman parte de un
+                    mismo conjunto, sin embargo
+                    cada uno es una estructura diferente y entre estas existe una junta constructiva que delimita cada
+                    edificio, es por ello que se analiza por separado en el análisis sismico, pero aunque a su vez estén
+                    separados se debe verificar la interacción de los 3 cuerpos para ver el comportamiento de los
+                    desplazamiento para revisar el posible golpeteo entre los mismos.
+                    Estos modelos forman parte de un proyecto de cambio de uso ya que pasan de tener un uso de oficinas
+                    a un uso de laboratorio, el cual consiste en dictaminar el estado estructural de los edificios y de
+                    ser necesario su posible reforzamiento de acuerdo a las nuevas solicitaciones de carga.</p>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="ed1">
+                                <img src="../images/rev-edificios.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" id="ed2">
+                                <img src="../images/rev-edificios1.jpg." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" id="ed3">
+                                <img src="../images/rev-edificios2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        </main>
+        <!--Fin de cuerpo de pagina -->
+
+        <!--Inicio de pie de pagina -->
+        <footer>
+            <h3>Contáctanos</h3>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/Seinycon-110163160902531" target="_blank"><i
+                            class="fa-brands fa-facebook"></i> Seinycon</a>
+                </li>
+                <li>
+                    <a href="mailto:seinycon@gmail.com"><i class="fa-solid fa-envelope"></i> seinycon@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:+52 5579772865"><i class="fa-solid fa-mobile"></i> +52 5579772865</a>
+                </li>
+            </ul>
+        </footer>
+        <!--Fin de pie de pagina -->
+    </div>
+
+    <!--Link a JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

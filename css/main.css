@@ -1,0 +1,909 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Color del titulo de las páginas*/
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+header h2 {
+    color: rgb(255, 255, 255);
+}
+
+/*color, tamaño y tipo de letra de h2*/
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*color, tamaño y tipo de letra de h2*/
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/*Diseño de la pagina*/
+.contenedor-pagina {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+/*Diseño del encabezado*/
+header {
+    grid-area: header;
+
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+/*Barra de navegación, tipo de letra, tamaño, etc..*/
+.navbar {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+}
+
+#navbarNavAltMarkup {
+    justify-content: space-around !important;
+}
+
+.nav-link {
+    padding: 0px 50px !important;
+}
+
+/*color de las letras de la barra de navegacion*/
+a {
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none;
+    font-size: 25px !important;
+}
+
+.container {
+    width: auto;
+}
+/*Estilos del main: Página de inicio*/
+/*mensaje principal*/
+#contenido-inicio {
+    margin: 152px 0px 0px 0px;
+    background-image: url(../images/principal.jpg);
+    height: 250px;
+}
+
+#contenido-inicio p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 100px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 100%;
+}
+
+/*se agrega una animacion*/
+#contenido-inicio p {
+    animation: entrar 5s 1;
+}
+
+@keyframes entrar {
+    0% {
+        margin-left: -10000px;
+    }
+
+    20% {
+        margin-left: -10000px;
+    }
+
+    25% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 0px;
+    }
+
+    75% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+.main-nuestro-trabajo {
+    margin: 155px 0px 0px 0px;
+}
+/*h3 de nuestro trabajo*/
+.main-nuestro-trabajo h3 {
+    color: rgb(33, 20, 156);
+}
+
+#proy-est, #proy-arq, #proy-cons, #proy-mant, #proy-planos {
+    background-color: rgb(233, 231, 231);
+    margin: 10px 2px 2px 0px;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: #000000;
+}
+
+/*imagenes del mismo tamaño*/
+#proy-est img,
+#proy-arq img,
+#proy-cons img,
+#proy-mant img,
+#proy-planos img {
+    height: 250px;
+    width: 100%;
+}
+
+/*Estilos de Galería*/
+.main-galeria {
+    padding: 155px 0px 0px 0px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-galeria p {
+    width: auto;
+}
+
+/*Estilos página nosotros*/
+.main-nosotros {
+    padding: 135px 0px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Agregamos una imagen de fondo*/
+.nosotros-titulo {
+    grid-area: nosotros-titulo;
+    background-repeat: no-repeat;
+    width: 480px;
+    height: 200px;
+    background-image: url(../images/fondo1.png);
+}
+
+.nosotros-titulo h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.527);
+    animation: entrar2 5s 1;
+}
+
+@keyframes entrar2 {
+    0% {
+        margin-left: -10000px;
+    }
+
+    20% {
+        margin-left: -10000px;
+    }
+
+    25% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 0px;
+    }
+
+    75% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+.nosotros-descripcion {
+    grid-area: nosotros-descripcion;
+    padding: 15px;
+    margin: 15px 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotros-descripcion img {
+    height: 150px;
+    width: 350px;
+}
+
+.nosotros-mision,
+.nosotros-vision {
+    background-color: rgb(233, 231, 231);
+    margin: 15px 45px 15px 45px;
+    box-shadow: 0px 15px 25px;
+    border-radius: 10px;
+}
+
+.nosotros-mision p,
+.nosotros-vision p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.nosotros-imagen img {
+    height: 250px;
+    width: 500px;
+}
+
+/*Cambiamos el tamaño de las letras*/
+.nosotros-titulo h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+/*Estilos para página de contacto*/
+.main-contacto {
+    padding: 135px 0px 25px 0px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Color de fondo para el formulario*/
+.contacto-formulario {
+    background-color: rgb(233, 231, 231);
+    margin: 10px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 15px 25px;
+    border-radius: 10px;
+}
+
+/*Pie de página*/
+footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*position: absolute;*/
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+/*Texto de las páginas*/
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/**************************/
+/* Media queries */
+/*************************/
+
+/*para Laptop*/
+@media screen and (min-width: 1200px) {
+
+    /*Color del titulo de las páginas*/
+    h1 {
+        font-size: 80px;
+    }
+
+    /*color, tamaño y tipo de letra de h2*/
+    h2 {
+        font-size: 35px;
+        color: wihte;
+    }
+
+    /*color, tamaño y tipo de letra de h2*/
+    h3 {
+        font-size: 30px;
+    }
+
+    /*Texto de las páginas*/
+    p {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /*estilos del header*/
+    header {
+        grid-area: header;
+
+        background: black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 55px;
+        position: fixed;
+        width: 100%;
+
+
+    }
+
+    /*Estilos del main: Página de inicio*/
+    .contenido-inicio p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    /*imagenes del mismo tamaño*/
+    #proy-1 img,
+    #proy-2 img,
+    #proy-3 img,
+    #proy-4 img,
+    #est-1 img,
+    #est-2 img {
+        height: 450px;
+        width: auto;
+    }
+
+    /*Imagenes de Nuestro Trabajo pagina inicio*/
+    .trabajo-inicio {
+        grid-area: trabajo-inicio;
+
+        display: grid;
+        grid-template-areas:
+            "tit-inicio tit-inicio"
+            "descrip-inicio descrip-inicio"
+            "proy-1 proy-2"
+            "proy-3 proy-4";
+        margin: 15px 20px 10px 20px;
+    }
+
+    .tit-inicio {
+        grid-area: tit-inicio;
+        text-align: center;
+    }
+
+    .descrip-inicio {
+        grid-area: descrip-inicio;
+        text-align: center;
+    }
+
+    #proy-1 {
+        grid-area: proy-1;
+    }
+
+    #proy-2 {
+        grid-area: proy-2;
+    }
+
+    #proy-3 {
+        grid-area: proy-3;
+    }
+
+    #proy-4 {
+        grid-area: proy-4;
+    }
+
+    .trabajo-inicio img {
+        height: 450px;
+        width: 650px;
+    }
+
+    /*Informacion de proyectos en Inicio*/
+    .proyectos-inicio {
+        grid-area: proyectos-inicio;
+
+        display: grid;
+        grid-template-areas:
+            "texto"
+            "imagenes";
+
+        margin: 0px 20px 10px 20px;
+    }
+
+    .texto {
+        grid-area: texto;
+    }
+
+    .imagenes {
+        grid-area: imagenes;
+
+        display: flex;
+        padding: 0px 0px 0px 50px;
+        align-items: center;
+    }
+
+    .proyectos-inicio img {
+        height: 350px;
+        width: 500px;
+    }
+
+    /*Estilos de la página Nuestro Trabajo*/
+    .main-nuestro-trabajo {
+        grid-area: main;
+
+        padding: 120px 0px 0px 0px;
+
+        display: grid;
+        grid-template-areas:
+            "proy-estructurales proy-arquitectonicos"
+            "proy-construccion proy-mantenimiento"
+            "proy-elaboracion-planos proy-elaboracion-planos"
+        ;
+    }
+
+    /*h3 de nuestro trabajo*/
+    .main-nuestro-trabajo h3 {
+        color: rgb(33, 20, 156);
+    }
+
+    /*Contendo de la página tipo flex*/
+    .proy-estructurales,
+    .proy-arquitectonicos,
+    .proy-construccion,
+    .proy-mantenimiento {
+        background-color: rgb(233, 231, 231);
+        margin: 15px 30px 0px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*Imagenes del mismo tamaño*/
+    .main-nuestro-trabajo img {
+        height: 358px;
+        width: 420px;
+    }
+
+    .img-proy img {
+        cursor: pointer;
+        transition: all 500ms ease-out;
+    }
+
+    /*Se agregan animaciones en las imagenes*/
+    .img-proy a:hover>img {
+        transform: scale(1.3);
+    }
+
+    /*Ajustar la ultima imagen en medio y da el mismo formato a anterior*/
+    .proy-elaboracion-planos {
+        grid-area: proy-elaboracion-planos;
+        background-color: rgb(233, 231, 231);
+        margin: 25px 0px 0px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 15px 25px;
+        border-radius: 10px;
+    }
+
+    /*Se agregan animaciones en las imagenes*/
+    .main-nuestro-trabajo section:hover>img {
+        transform: scale(1.3);
+    }
+
+    /*Estilos de Galería*/
+    .main-galeria {
+        padding: 135px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galeria-revision-edificios,
+    .galeria-modelamiento,
+    .galeria-ref-tanque,
+    .galeria-ref-edificio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 700px;
+    }
+
+    .galeria-ref-edificio {
+        height: 650px;
+    }
+
+    .galeria-revision-edificios {
+        height: 660px;
+    }
+
+    /*En galería hacer imagenes tipo presentacion*/
+    #carouselExampleSlidesOnly {
+        margin: 5px 200px;
+        height: 650px;
+        width: 650px;
+    }
+
+    /*tamño de las imagenes */
+    #c1 img,
+    #c2 img,
+    #c3 img,
+    #c4 img,
+    #ed1 img,
+    #ed2 img,
+    #ed3 img {
+        height: 450px;
+        width: 650px;
+    }
+
+    #t1 img,
+    #t2 img,
+    #t3 img {
+        height: 450px;
+        width: 550px;
+    }
+
+    #e3 img,
+    #e4 img {
+        height: 450px;
+        width: 450px;
+    }
+
+    .main-galeria p {
+        font-size: 20px;
+    }
+
+    /*Estilos página nosotros*/
+    .main-nosotros {
+        padding: 135px 0px 0px 0px;
+
+        display: grid;
+        grid-template-areas:
+            "nosotros-titulo nosotros-titulo"
+            "nosotros-descripcion nosotros-descripcion"
+            "nosotros-mision nosotros-vision"
+            "nosotros-imagen nosotros-imagen"
+        ;
+    }
+
+    /*Agregamos una imagen de fondo*/
+    .nosotros-titulo {
+        grid-area: nosotros-titulo;
+        background-image: url(../images/fondo1.png);
+        width: auto;
+        height: 500px;
+        margin: 0px;
+    }
+
+    .nosotros-titulo h2 {
+        -moz-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 2px;
+        -moz-text-stroke-color: #000000;
+        -webkit-text-stroke-color: #ffffff;
+
+        text-shadow: 7px 7px #ff0000;
+    }
+
+    .nosotros-descripcion {
+        grid-area: nosotros-descripcion;
+        padding: 15px;
+        margin: 15px 30px;
+
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "descripcion imagen"
+        ;
+    }
+
+    .nosotros-descripcion h2 {
+        grid-area: titulo;
+    }
+
+    .nosotros-descripcion p {
+        grid-area: descripcion;
+    }
+
+    .nosotros-descripcion img {
+        grid-area: imagen;
+        height: 300px;
+        width: 550px;
+    }
+
+    .nosotros-vision {
+        grid-area: nosotros-vision;
+    }
+
+    .nosotros-mision {
+        grid-area: nosotros-mision;
+    }
+
+    .nosotros-mision,
+    .nosotros-vision {
+        background-color: rgb(233, 231, 231);
+        margin: 15px 45px 15px 45px;
+    }
+
+    .nosotros-mision p,
+    .nosotros-vision p {
+        font-size: 20px;
+    }
+
+    .nosotros-imagen {
+        grid-area: nosotros-imagen;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .nosotros-imagen img {
+        height: 400px;
+        width: 800px;
+    }
+
+    /*Pie de página*/
+    footer {
+        height: 70px;
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 768px) {
+
+    /*Color del titulo de las páginas*/
+    h1 {
+        font-size: 35px;
+    }
+
+    /*color, tamaño y tipo de letra de h2*/
+    header h2 {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    /*color, tamaño y tipo de letra de h2*/
+    h3 {
+        font-size: 25px;
+    }
+
+    /*Texto de las páginas*/
+    p {
+        font-size: 20px;
+    }
+
+    /*Barra de navegación, tipo de letra, tamaño, etc..*/
+    .navbar {
+        position: fixed;
+        top: 90px;
+        width: 100%;
+    }
+
+    /*estilos del header*/
+    header {
+        grid-area: header;
+
+        background: black;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90px;
+        position: fixed;
+        width: 100%;
+    }
+
+    /*Estilos del main: Página de inicio*/
+    /*Imagen y mensaje principal*/
+    .contenido-inicio {
+        grid-area: contenido-inicio;
+        background-image: url(../images/principal.jpg);
+        height: 500px;
+        width: auto;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px 50px;
+    }
+
+    .contenido-inicio p {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /*imagenes del mismo tamaño*/
+    #proy-1 img,
+    #proy-2 img,
+    #proy-3 img,
+    #proy-4 img,
+    #est-1 img,
+    #est-2 img {
+        height: 250px;
+        width: 100%;
+        padding: 5px 2px;
+    }
+
+    /*Estilos de la página Nuestro Trabajo*/
+    .main-nuestro-trabajo {
+        grid-area: main;
+
+        padding: 135px 0px 0px 0px;
+
+        display: grid;
+        grid-template-areas:
+            "proy-estructurales proy-arquitectonicos"
+            "proy-construccion proy-mantenimiento"
+            "proy-elaboracion-planos proy-elaboracion-planos"
+        ;
+    }
+
+    /*h3 de nuestro trabajo*/
+    .main-nuestro-trabajo h3 {
+        color: rgb(33, 20, 156);
+    }
+
+    /*Contendo de la página tipo flex*/
+    .proy-estructurales,
+    .proy-arquitectonicos,
+    .proy-construccion,
+    .proy-mantenimiento {
+        grid-area: proy-estructurales;
+        background-color: rgb(233, 231, 231);
+        margin: 25px 50px 0px 50px;
+        /*padding: 50px;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*Imagenes del mismo tamaño*/
+    .main-nuestro-trabajo img {
+        height: 258px;
+        width: 420px;
+    }
+
+    .proy-arquitectonicos {
+        grid-area: proy-arquitectonicos;
+
+    }
+
+    .proy-construccion {
+        grid-area: proy-construccion;
+
+    }
+
+    .proy-mantenimiento {
+        grid-area: proy-mantenimiento;
+
+    }
+
+    /*Ajustar la ultima imagen en medio y da el mismo formato a anterior*/
+    .proy-elaboracion-planos {
+        grid-area: proy-elaboracion-planos;
+        background-color: rgb(233, 231, 231);
+        margin: 25px 150px 25px 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+
+    /*Estilos página nosotros*/
+    .main-nosotros {
+        padding: 135px 0px 0px 0px;
+
+        display: grid;
+        grid-template-areas:
+            "nosotros-titulo nosotros-titulo"
+            "nosotros-descripcion nosotros-descripcion"
+            "nosotros-mision nosotros-vision"
+            "nosotros-imagen nosotros-imagen"
+        ;
+    }
+
+    /*Agregamos una imagen de fondo*/
+    .nosotros-titulo {
+        grid-area: nosotros-titulo;
+
+        background-image: url(../images/fondo1.png);
+        padding: 135px;
+    }
+
+    .nosotros-descripcion {
+        grid-area: nosotros-descripcion;
+        padding: 15px;
+        margin: 15px 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nosotros-titulo h2 {
+        text-align: center;
+    }
+
+    .nosotros-descripcion h2 {
+        grid-area: titulo;
+    }
+
+    .nosotros-descripcion p {
+        grid-area: descripcion;
+    }
+
+    .nosotros-descripcion img {
+        grid-area: imagen;
+        height: 300px;
+        width: 550px;
+    }
+
+    .nosotros-vision {
+        grid-area: nosotros-vision;
+    }
+
+    .nosotros-mision {
+        grid-area: nosotros-mision;
+    }
+
+    .nosotros-mision,
+    .nosotros-vision {
+        background-color: rgb(233, 231, 231);
+        margin: 15px 45px 15px 45px;
+    }
+
+    .nosotros-mision p,
+    .nosotros-vision p {
+        font-size: 20px;
+    }
+
+    .nosotros-imagen {
+        grid-area: nosotros-imagen;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .nosotros-imagen img {
+        height: 400px;
+        width: 800px;
+    }
+
+    /*Cambiamos el tamaño de las letras*/
+    .nosotros-titulo h2 {
+        font-size: 80px;
+        text-align: center;
+        color: #fff;
+    }
+
+    footer i {
+        color: #fff;
+    }
+}

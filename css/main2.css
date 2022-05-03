@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Color del titulo de las páginas*/
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+header h2{
+    color: rgb(255, 255, 255);
+}
+
+/*Diseño de la pagina*/
+.contenedor-pagina {
+
+    /*Estilos de Grid*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+/*Diseño del encabezado*/
+header {
+    grid-area: header;
+
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+/*Barra de navegación, tipo de letra, tamaño, etc..*/
+.navbar {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+}
+
+
+/*color de las letras de la barra de navegacion*/
+a {
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none;
+    font-size: 25px !important;
+}
+
+/*Estilos del main: Página de inicio*/
+.main-inicio {
+
+    padding: 150px 0px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*Imagen y mensaje principal*/
+.contenido-inicio {
+    background-size: auto;
+    background-image: url(../images/principal.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenido-inicio p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.contenido-inicio p {
+    font-size: 30px;
+    text-align: center;
+    animation: entrar 5s 1;
+}
+
+@keyframes entrar {
+    0% {
+        margin-left: -10000px;
+    }
+
+    20% {
+        margin-left: -10000px;
+    }
+
+    25% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 0px;
+    }
+
+    75% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
