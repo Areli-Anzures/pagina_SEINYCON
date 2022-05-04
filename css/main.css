@@ -14,6 +14,7 @@ h1 {
 
 header h2 {
     color: rgb(255, 255, 255);
+
 }
 
 /*color, tamaño y tipo de letra de h2*/
@@ -33,12 +34,10 @@ h3 {
 
 /*Diseño de la pagina*/
 .contenedor-pagina {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-
 }
 
 /*Diseño del encabezado*/
@@ -77,61 +76,66 @@ a {
     font-size: 25px !important;
 }
 
-.container {
-    width: auto;
-}
-
 /*Estilos del main: Página de inicio*/
-/*mensaje principal*/
-#contenido-inicio {
-    margin: 152px 0px 0px 0px !important;
+.contenido-inicio {
+    margin: 157px 0px 0px 0px !important;
     background-image: url(../images/principal.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    height: 250px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 460px;
+    width: 100%;
 }
 
-#contenido-inicio p {
+/*mensaje principal*/
+.contenido-inicio p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.527);
-    margin: 100px 0px 0px 0px !important;
+    background-color: rgba(0, 0, 0, 0.425);
+    background-size: auto auto;
+    padding-top: 190px;
+    width: 100%;
 }
 
 /*se agrega una animacion*/
-#contenido-inicio p {
+.contenido-inicio p {
     animation: entrar 5s 1;
 }
 
 @keyframes entrar {
-    0% {
-        margin-left: -10000px;
+    from {
+        margin-left: 100%;
+        width: 300%
     }
 
-    20% {
-        margin-left: -10000px;
-    }
-
-    25% {
-        margin-left: 0px;
-    }
-
-    50% {
-        margin-left: 0px;
-    }
-
-    75% {
-        margin-left: 0px;
-    }
-
-    100% {
-        margin-left: 0px;
+    to {
+        margin-left: 0%;
+        width: 100%;
     }
 }
 
-.main-nuestro-trabajo .container {
+.tit-inicio {
+    animation: deslizar 4s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes deslizar {
+    from {
+        margin-right: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+/* Pagina nuestro trabajo*/
+.main-nuestro-trabajo .container-fluid {
     margin: 130px 0px 0px 0px !important;
 }
 
@@ -140,19 +144,18 @@ a {
     color: rgb(33, 20, 156);
 }
 
+/*centrar elementos de cada caja*/
 #proy-estruc,
 #proy-arq,
 #proy-cons,
 #proy-mant,
 #proy-planos {
-    background-color: rgb(233, 231, 231);
     margin: 10px 2px 2px 0px;
     padding: 0px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    box-shadow: #000000;
 }
 
 /*imagenes del mismo tamaño*/
@@ -165,9 +168,18 @@ a {
     width: 250px;
 }
 
+.main-nuestro-trabajo img {
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+.main-nuestro-trabajo img:hover {
+    transform: scale(1.5);
+}
+
 /*Estilos de Galería*/
 .main-galeria {
-    padding: 155px 0px 0px 0px;
+    padding: 160px 0px 0px 0px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -175,8 +187,54 @@ a {
     justify-content: center;
 }
 
-.main-galeria p {
-    width: auto;
+.contenedor-galeria .titulo {
+    padding: 70px 10px 0px 0px;
+}
+
+.contenedor-galeria .descrip {
+    text-align: justify;
+}
+
+/*para evitar que las imagenes pasen encima del header*/
+.carousel-inner {
+    z-index: -1;
+}
+
+.mod-edificio,
+.proy-rev,
+.proy-ref,
+.rev-edif {
+    border-style: dashed;
+    border-color: rgb(80, 83, 255);
+}
+
+/*Animaciones para la galeria*/
+.main-galeria .titulo {
+    position: top;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+
+}
+
+.titulo {
+    animation: typewriter 5s steps(44) 1s 1 normal both;
+    z-index: -1;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 12em;
+    }
 }
 
 /*Estilos página nosotros*/
@@ -192,40 +250,32 @@ a {
 .nosotros-titulo {
     grid-area: nosotros-titulo;
     background-repeat: no-repeat;
-    width: 480px;
-    height: 200px;
     background-image: url(../images/fondo1.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .nosotros-titulo h2 {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.527);
-    animation: entrar2 5s 1;
+    padding-top: 190px;
+    animation-duration: 3s;
+    animation-name: entrar2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes entrar2 {
-    0% {
-        margin-left: -10000px;
+    from {
+        margin-left: 100%;
+        width: 300%
     }
 
-    20% {
-        margin-left: -10000px;
-    }
-
-    25% {
-        margin-left: 0px;
-    }
-
-    50% {
-        margin-left: 0px;
-    }
-
-    75% {
-        margin-left: 0px;
-    }
-
-    100% {
-        margin-left: 0px;
+    to {
+        margin-left: 0%;
+        width: 100%;
     }
 }
 
@@ -236,25 +286,31 @@ a {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.nosotros-descripcion img {
-    height: 150px;
-    width: 350px;
+.imagen-logo img {
+    height: 350px;
+    width: 450px;
 }
 
 .nosotros-mision,
 .nosotros-vision {
-    background-color: rgb(233, 231, 231);
-    margin: 15px 45px 15px 45px;
     box-shadow: 0px 15px 25px;
     border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nosotros-mision p,
 .nosotros-vision p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
+    text-align: justify;
 }
 
 .nosotros-imagen img {
@@ -270,92 +326,78 @@ a {
     color: #fff;
 }
 
-    /*Estilos para página de contacto*/
-    .main-contacto {
-        padding: 135px 0px 25px 0px;
-        height: auto;
+/*Estilos para página de contacto*/
+.main-contacto {
+    padding: 135px 0px 25px 0px;
+    height: auto;
+    width: 100%;
+}
+
+#contacto-cons {
+    background-image: url(../images/fondo2.jpg);
+    background-size: 200px;
+}
+
+#contacto-cons img {
+    height: 300px;
+    width: 300px;
+}
+
+#contacto-des {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    background-image: url(../images/fondo2.jpg);
+    background-size: 200px;
+}
+
+#contacto-des p {
+    text-align: left;
+    background-color: #ffffffde;
+    animation: entrar3 1s 1;
+}
+
+@keyframes entrar3 {
+    from {
+        margin-right: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-right: 0%;
         width: 100%;
     }
+}
 
-    #contacto-cons {
-        background-image: url(../images/fondo2.jpg);
-        background-size: 200px;
-    }
+#contacto-des h2 {
+    background-color: #ffffffde;
+}
 
-    #contacto-cons img {
-        height: 300px;
-        width: 300px;
-    }
+#contacto-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
 
-    #contacto-des {
-        display: flex;
-        flex-direction: column;
-        padding-top: 60px;
-        background-image: url(../images/fondo2.jpg);
-        background-size: 200px;
-    }
+#contacto-info p {
+    height: 30px;
+    font-size: 15px;
+}
 
-    #contacto-des p {
-        text-align: left;
-        background-color: #ffffffde;
-        animation: entrar3 5s infinite;
-    }
+/*Color de fondo para el formulario*/
+#contacto-form {
+    background-color: rgb(233, 231, 231);
+    margin: 10px;
+    padding: 40px;
 
-    @keyframes entrar3 {
-        0% {
-            margin-right: 10000px;
-        }
-    
-        20% {
-            margin-right: 10000px;
-        }
-    
-        25% {
-            margin-right: 0px;
-        }
-    
-        50% {
-            margin-right: 0px;
-        }
-    
-        75% {
-            margin-right: 0px;
-        }
-    
-        100% {
-            margin-right: 0px;
-        }
-    }
-
-    #contacto-des h2 {
-        background-color: #ffffffde;
-    }
-
-    #contacto-info {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    #contacto-info p {
-        height: 30px;
-        font-size: 15px;
-    }
-
-    /*Color de fondo para el formulario*/
-    #contacto-form {
-        background-color: rgb(233, 231, 231);
-        margin: 10px;
-        padding: 40px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 15px 25px;
-        border-radius: 10px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 15px 25px;
+    border-radius: 10px;
+}
 
 /*Pie de página*/
 footer {
@@ -422,21 +464,21 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 55px;
+        height: 100px;
         position: fixed;
         width: 100%;
     }
 
     /*Estilos del main: Página de inicio*/
     #contenido-inicio {
-        height: 400px;
-        width: auto;
+        height: 465px;
+        width: 100%;
+
     }
 
     .contenido-inicio p {
         font-size: 40px;
         text-align: center;
-        margin: 400px 0px 0px 0px !important;
     }
 
     .proyectos-inicio img {
@@ -453,68 +495,27 @@ p {
         width: 100%;
     }
 
-    #proy-estruc,
-    #proy-arq,
-    #proy-cons,
-    #proy-mant,
-    #proy-planos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /*imagenes del mismo tamaño*/
     #proy-estruc img,
     #proy-arq img,
     #proy-cons img,
     #proy-mant img,
     #proy-planos img {
-        height: 300px;
-        width: 500px;
+        height: 250px;
+        width: 350px;
     }
 
-    .main-nuestro-trabajo img {
+    /*Se agregan animaciones*/
+    .imagen {
+        overflow: hidden;
+    }
+
+    .imagen img {
         cursor: pointer;
         transition: all 500ms ease-out;
     }
 
-    /*Se agregan animaciones en las imagenes*/
-    .main-nuestro-trabajo div:hover>img {
-        transform: scale(1.3);
-    }
-
-
-    /*Se agregan animaciones en las imagenes*/
-    .main-nuestro-trabajo section:hover>img {
-        transform: scale(1.3);
-    }
-
     /*Estilos de Galería*/
-    .main-galeria {
-        padding: 135px 0px 0px 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .galeria-revision-edificios,
-    .galeria-modelamiento,
-    .galeria-ref-tanque,
-    .galeria-ref-edificio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 700px;
-    }
-
-    .galeria-ref-edificio {
-        height: 650px;
-    }
-
-    .galeria-revision-edificios {
-        height: 660px;
-    }
-
     /*En galería hacer imagenes tipo presentacion*/
     #carouselExampleSlidesOnly {
         margin: 5px 200px;
@@ -551,24 +552,28 @@ p {
         font-size: 20px;
     }
 
-    /*Estilos página nosotros*/
-    .main-nosotros {
-        padding: 135px 0px 0px 0px;
-
-        display: grid;
-        grid-template-areas:
-            "nosotros-titulo nosotros-titulo"
-            "nosotros-descripcion nosotros-descripcion"
-            "nosotros-mision nosotros-vision"
-            "nosotros-imagen nosotros-imagen"
-        ;
+    /*Animaciones para la galeria*/
+    .titulo {
+        animation: typewriter 5s steps(44) 1s 1 normal both;
+        z-index: -1;
     }
 
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 18em;
+        }
+    }
+
+    /*Estilos página nosotros*/
     /*Agregamos una imagen de fondo*/
     .nosotros-titulo {
         grid-area: nosotros-titulo;
         background-image: url(../images/fondo1.png);
-        width: auto;
+        width: 100%;
         height: 500px;
         margin: 0px;
     }
@@ -580,46 +585,6 @@ p {
         -webkit-text-stroke-color: #ffffff;
 
         text-shadow: 7px 7px #ff0000;
-    }
-
-    .nosotros-descripcion {
-        grid-area: nosotros-descripcion;
-        padding: 15px;
-        margin: 15px 30px;
-
-        display: grid;
-        grid-template-areas:
-            "titulo titulo"
-            "descripcion imagen"
-        ;
-    }
-
-    .nosotros-descripcion h2 {
-        grid-area: titulo;
-    }
-
-    .nosotros-descripcion p {
-        grid-area: descripcion;
-    }
-
-    .nosotros-descripcion img {
-        grid-area: imagen;
-        height: 300px;
-        width: 550px;
-    }
-
-    .nosotros-vision {
-        grid-area: nosotros-vision;
-    }
-
-    .nosotros-mision {
-        grid-area: nosotros-mision;
-    }
-
-    .nosotros-mision,
-    .nosotros-vision {
-        background-color: rgb(233, 231, 231);
-        margin: 15px 45px 15px 45px;
     }
 
     .nosotros-mision p,
@@ -646,14 +611,15 @@ p {
         width: auto;
     }
 
-    #contacto-cons {
+    #contacto-cons,
+    #contacto-des {
         background-image: url(../images/fondo2.jpg);
-        background-size: 200px;
-    }
+        background-size: 400px;
+        height: 500px;
 
-    #contacto-cons img {
-        height: 400px;
-        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #contacto-info {
@@ -706,32 +672,18 @@ p {
         width: 100%;
     }
 
-    /*estilos del header*/
-    header {
-        grid-area: header;
-
-        background: black;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 90px;
-        position: fixed;
-        width: 100%;
-    }
-
     /*Estilos del main: Página de inicio*/
     /*Imagen y mensaje principal*/
     .contenido-inicio {
         grid-area: contenido-inicio;
         background-image: url(../images/principal.jpg);
-        height: 500px;
+        height: 400px;
         width: auto;
         background-repeat: no-repeat;
 
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         padding: 0px 50px;
     }
 
@@ -752,6 +704,22 @@ p {
         padding: 5px 2px;
     }
 
+    /*Animaciones para la galeria*/
+    .titulo {
+        animation: typewriter 5s steps(44) 1s 1 normal both;
+        z-index: -1;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 18em;
+        }
+    }
+
     /*Estilos de la página Nuestro Trabajo*/
     .main-nuestro-trabajo .container {
         margin: 120px 0px 0px 0px !important;
@@ -764,23 +732,15 @@ p {
 
     /*Estilos página nosotros*/
     .main-nosotros {
-        padding: 135px 0px 0px 0px;
-
-        display: grid;
-        grid-template-areas:
-            "nosotros-titulo nosotros-titulo"
-            "nosotros-descripcion nosotros-descripcion"
-            "nosotros-mision nosotros-vision"
-            "nosotros-imagen nosotros-imagen"
-        ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
 
     /*Agregamos una imagen de fondo*/
     .nosotros-titulo {
-        grid-area: nosotros-titulo;
-
-        background-image: url(../images/fondo1.png);
-        padding: 135px;
+        padding: 80px;
     }
 
     .nosotros-descripcion {
@@ -793,22 +753,10 @@ p {
         align-items: center;
     }
 
-    .nosotros-titulo h2 {
-        text-align: center;
-    }
-
-    .nosotros-descripcion h2 {
-        grid-area: titulo;
-    }
-
-    .nosotros-descripcion p {
-        grid-area: descripcion;
-    }
-
-    .nosotros-descripcion img {
+    .imagen-logo img {
         grid-area: imagen;
-        height: 300px;
-        width: 550px;
+        height: 250px;
+        width: 350px;
     }
 
     .nosotros-vision {
@@ -828,13 +776,6 @@ p {
     .nosotros-mision p,
     .nosotros-vision p {
         font-size: 20px;
-    }
-
-    .nosotros-imagen {
-        grid-area: nosotros-imagen;
-
-        display: flex;
-        justify-content: center;
     }
 
     .nosotros-imagen img {
