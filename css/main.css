@@ -49,6 +49,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     height: 100px;
     position: fixed;
     width: 100%;
@@ -77,52 +78,39 @@ a {
 }
 
 /*Estilos del main: Página de inicio*/
-.contenido-inicio {
-    margin: 157px 0px 0px 0px !important;
+.main-inicio {
+    width: 100%;
+    padding-top: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+/*se agrega imagen de fondo*/
+.mensaje-inicio {
     background-image: url(../images/principal.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 460px;
-    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
-/*mensaje principal*/
-.contenido-inicio p {
+/*estilo de mensaje de inicio*/
+.mensaje-inicio p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+    font-size: 15px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.425);
-    background-size: auto auto;
-    padding-top: 190px;
-    width: 100%;
+    color: white;
+    background-color: #0000005b;
 }
 
-/*se agrega una animacion*/
-.contenido-inicio p {
-    animation: entrar 5s 1;
-}
-
+/*se agrega animaciones*/
 @keyframes entrar {
-    from {
-        margin-left: 100%;
-        width: 300%
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-
-.tit-inicio {
-    animation: deslizar 4s infinite;
-    animation-direction: alternate;
-}
-
-@keyframes deslizar {
     from {
         margin-right: 100%;
         width: 300%
@@ -132,6 +120,21 @@ a {
         margin-right: 0%;
         width: 100%;
     }
+}
+
+.trabajo-inicio h2, .destacados-inicio h2{
+    animation: entrar 2s infinite;
+}
+
+/*imagenes del mismo tamaño*/
+#proy-1 img,
+#proy-2 img,
+#proy-3 img,
+#proy-4 img,
+#est-1 img,
+#est-2 img {
+    height: 150px;
+    width: 250px;
 }
 
 /* Pagina nuestro trabajo*/
@@ -239,91 +242,69 @@ a {
 
 /*Estilos página nosotros*/
 .main-nosotros {
-    padding: 135px 0px 0px 0px;
-
+    width: 100%;
+    padding-top: 155px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
 }
 
 /*Agregamos una imagen de fondo*/
-.nosotros-titulo {
-    grid-area: nosotros-titulo;
-    background-repeat: no-repeat;
-    background-image: url(../images/fondo1.png);
+.nosotros-mensaje {
+    background-image: url("../images/fondo1.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.nosotros-titulo h2 {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.527);
-    padding-top: 190px;
-    animation-duration: 3s;
-    animation-name: entrar2;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes entrar2 {
-    from {
-        margin-left: 100%;
-        width: 300%
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-
-.nosotros-descripcion {
-    grid-area: nosotros-descripcion;
-    padding: 15px;
-    margin: 15px 30px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagen-logo img {
     height: 350px;
-    width: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
-.nosotros-mision,
-.nosotros-vision {
-    box-shadow: 0px 15px 25px;
-    border-radius: 10px;
+/*estilos del mensaje nosotros*/
+.nosotros-mensaje h2 {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.525);
+}
 
+/*se agrega animacion*/
+.nosotros-mensaje h2{
+    animation: entrar 1s infinite;
+}
+
+#logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.nosotros-mision p,
-.nosotros-vision p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+#logo img {
+    height: 250px;
+    width: 250px;
+}
+
+#mensaje p,
+#mision p,
+#vision p {
     text-align: justify;
 }
 
-.nosotros-imagen img {
-    height: 250px;
-    width: 500px;
+#mision,
+#vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
-/*Cambiamos el tamaño de las letras*/
-.nosotros-titulo h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
+.nosotros-pagina img {
+    height: 200px;
+    width: 100%;
 }
 
 /*Estilos para página de contacto*/
@@ -354,17 +335,17 @@ a {
 #contacto-des p {
     text-align: left;
     background-color: #ffffffde;
-    animation: entrar3 1s 1;
+    animation: entrar2 1s 1;
 }
 
-@keyframes entrar3 {
+@keyframes entrar2 {
     from {
-        margin-right: 100%;
+        margin-left: 100%;
         width: 300%
     }
 
     to {
-        margin-right: 0%;
+        margin-left: 0%;
         width: 100%;
     }
 }
@@ -470,20 +451,34 @@ p {
     }
 
     /*Estilos del main: Página de inicio*/
-    #contenido-inicio {
-        height: 465px;
+    .main-inicio {
         width: 100%;
-
+        padding-top: 140px;
     }
 
-    .contenido-inicio p {
-        font-size: 40px;
+    /*se agrega imagen de fondo*/
+    .mensaje-inicio {
+        height: 490px;
+    }
+
+    /*estilo de mensaje de inicio*/
+    .mensaje-inicio p {
+        font-size: 20px;
         text-align: center;
+        color: white;
+        background-color: #0000005b;
+        margin: 50px;
     }
 
-    .proyectos-inicio img {
+    /*imagenes del mismo tamaño*/
+    #proy-1 img,
+    #proy-2 img,
+    #proy-3 img,
+    #proy-4 img,
+    #est-1 img,
+    #est-2 img {
         height: 350px;
-        width: 500px;
+        width: 350px;
     }
 
     /*Estilos de la página Nuestro Trabajo*/
@@ -569,39 +564,49 @@ p {
     }
 
     /*Estilos página nosotros*/
-    /*Agregamos una imagen de fondo*/
-    .nosotros-titulo {
-        grid-area: nosotros-titulo;
-        background-image: url(../images/fondo1.png);
+    /*Estilos página nosotros*/
+    .main-nosotros {
         width: 100%;
-        height: 500px;
-        margin: 0px;
-    }
-
-    .nosotros-titulo h2 {
-        -moz-text-stroke-width: 2px;
-        -webkit-text-stroke-width: 2px;
-        -moz-text-stroke-color: #000000;
-        -webkit-text-stroke-color: #ffffff;
-
-        text-shadow: 7px 7px #ff0000;
-    }
-
-    .nosotros-mision p,
-    .nosotros-vision p {
-        font-size: 20px;
-    }
-
-    .nosotros-imagen {
-        grid-area: nosotros-imagen;
-
+        padding-top: 140px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
 
-    .nosotros-imagen img {
-        height: 400px;
-        width: 800px;
+    /*Agregamos una imagen de fondo*/
+    .nosotros-mensaje {
+        height: 490px;
+        width: 100%;
+    }
+
+    /*estilos del mensaje nosotros*/
+    .nosotros-mensaje h2 {
+        font-size: 60px;
+    }
+
+    #logo img {
+        height: 250px;
+        width: 350px;
+    }
+
+    #mensaje p,
+    #mision p,
+    #vision p {
+        text-align: justify;
+    }
+
+    #mision,
+    #vision {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .nosotros-pagina img {
+        height: 550px;
+        width: 100%;
     }
 
     /*Estilos para página de contacto*/
@@ -673,24 +678,7 @@ p {
     }
 
     /*Estilos del main: Página de inicio*/
-    /*Imagen y mensaje principal*/
-    .contenido-inicio {
-        grid-area: contenido-inicio;
-        background-image: url(../images/principal.jpg);
-        height: 400px;
-        width: auto;
-        background-repeat: no-repeat;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0px 50px;
-    }
-
-    .contenido-inicio p {
-        font-size: 30px;
-        text-align: center;
-    }
 
     /*imagenes del mismo tamaño*/
     #proy-1 img,
@@ -732,62 +720,14 @@ p {
 
     /*Estilos página nosotros*/
     .main-nosotros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        padding-top: 140px;
         align-content: center;
     }
 
-    /*Agregamos una imagen de fondo*/
-    .nosotros-titulo {
-        padding: 80px;
-    }
-
-    .nosotros-descripcion {
-        grid-area: nosotros-descripcion;
-        padding: 15px;
-        margin: 15px 30px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imagen-logo img {
-        grid-area: imagen;
-        height: 250px;
-        width: 350px;
-    }
-
-    .nosotros-vision {
-        grid-area: nosotros-vision;
-    }
-
-    .nosotros-mision {
-        grid-area: nosotros-mision;
-    }
-
-    .nosotros-mision,
-    .nosotros-vision {
-        background-color: rgb(233, 231, 231);
-        margin: 15px 45px 15px 45px;
-    }
-
-    .nosotros-mision p,
-    .nosotros-vision p {
-        font-size: 20px;
-    }
-
-    .nosotros-imagen img {
+    .nosotros-pagina img {
         height: 400px;
-        width: 800px;
-    }
-
-    /*Cambiamos el tamaño de las letras*/
-    .nosotros-titulo h2 {
-        font-size: 80px;
-        text-align: center;
-        color: #fff;
+        width: 100%;
     }
 
     /*Estilos para página de contacto*/

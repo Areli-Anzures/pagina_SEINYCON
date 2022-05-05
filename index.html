@@ -18,8 +18,9 @@
 
 <body>
 
+    <!--Inicio de la pagina-->
     <div class="contenedor-pagina">
-        <!-- Encabezado de pagina -->
+        <!--Inicio del header-->
         <header>
             <!--titulo de pagina -->
             <h1>Servicios de Ingeniería y Construcción</h1>
@@ -51,59 +52,48 @@
 
         <!--Inicio de cuerpo de pagina -->
         <main class="main-inicio">
-            <section class="contenido-inicio">
-                <p>Te ayudamos con tus proyectos arquitectónicos, proyectos estructurales de cualquier tipo,
-                    presupuestos de
-                    obra, planos, construcción y mantenimiento en general.</p>
+            <section class="mensaje-inicio">
+                <p class="texto">Te ayudamos con tus proyectos arquitectónicos, proyectos estructurales de cualquier tipo,
+                    presupuestos de obra, planos, construcción y mantenimiento en general</p>
             </section>
-            <section class="trabajo-inicio">
-                <h2 class="tit-inicio">Nuestro Trabajo</h2>
-                <p class="descrip-inicio">Estamos para ayudarlos en cualquier tema relacionado con ingeniería de
-                    proyectos y construcción.</p>
-            </section>
-            <section class="container-fluid">
-                <div class="row ">
-                    <div class="col-sm-12 col-md-6 col-lg-6" id="proy-1">
+            <section class="container-fluid overflow-hidden trabajo-inicio">
+                <h2>Nuestro Trabajo</h2>
+                <p>Estamos para ayudarte en cualquer tema relacionado con ingeniería de proyectos y construcción</p>
+                <div class="row gy-5 p-3">
+                    <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="proy-1">
                         <a href="pages/nuestro-trabajo.html"><img src="images/proy-arq.png" alt="proyecto de arquitectura"></a>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6" id="proy-2">
-                        <a href="pages/nuestro-trabajo.html"><img src="images/proy-cons.png" alt="proyecto de construcción"></a>
+                    <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="proy-2">
+                        <a href="pages/nuestro-trabajo.html"></a><img src="images/proy-cons.png" alt="Proyectos de construcción"></a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6" id="proy-3">
-                        <a href="pages/nuestro-trabajo.html"><img src="images/proy-estruc.png" alt="proyecto estructurales"></a>
+                <div class="row gy-5 p-3">
+                    <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="proy-3">
+                        <a href="pages/nuestro-trabajo.html"></a><img src="images/proy-estruc.png" alt="Proyectos estructurales"></a>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6" id="proy-4">
-                        <a href="pages/nuestro-trabajo.html"><img src="images/proy-mant.png" alt="proyecto de mantenimiento"></a>
+                    <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="proy-4">
+                        <a href="pages/nuestro-trabajo.html"></a><img src="images/proy-mant.png" alt="Proyectos de mantenimiento"></a>
                     </div>
                 </div>
             </section>
-
-            <section class="container-fluid">
-                <div class="row p-3">
-                    <div class="col p-3">
-                        <h2 class="tit-inicio">Proyectos Destacados</h2>
-                        <p>Proyecto para una estructura de 3 niveles, la cual tendrá un uso comercial en una sección de
-                            planta baja y totalmente en su primer nivel, en segundo nivel, mientras que el segundo nivel
-                            tendrá uso de departamento. Generado de planos estructurales y detalles de armados y
-                            refuerzos
-                            requeridos.</p>
+            <section class="container-fluid overflow-hidden destacados-inicio">
+                <h2>Proyectos Destacados</h2>
+                <p>Proyecto para una estructura de 3 niveles, la cual tendrá un uso comercial en una sección de planta
+                    baja y totalmente en su primer nivel, en segundo nivel, mientras que el segundo nivel tendrá uso de
+                    departamento. Generado de planos estructurales y detalles de armados y refuerzos requeridos.</p>
+                    <div class="row gy-5 p-3">
+                        <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="est-1">
+                            <img src="images/estructura-3-niveles1.png" alt="estructura 1">
+                            <p>Planos estructurados</p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 p-3" id="est-2">
+                            <img src="images/estructura-3-niveles2.png" alt="estructura 2">
+                            <p>Modelo 3D</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row ">
-                    <div class="col-sm-12 col-md-6 col-lg-6 " id="est-1">
-                        <img src="images/estructura-3-niveles1.png" alt="estructura de 3 niveles">
-                        <p>Planos estructurados</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6" id="est-2">
-                        <img src="images/estructura-3-niveles2.png" alt="estructura de 3 niveles">
-                        <p>Modelo 3D</p>
-                    </div>
-                </div>
             </section>
         </main>
-        <!--Fin de cuerpo de pagina -->
+        <!--Fin del main-->
 
         <!--Inicio de pie de pagina -->
         <footer>
@@ -122,13 +112,14 @@
             </ul>
         </footer>
         <!--Inicio de pie de pagina -->
+
     </div>
+
 
     <!--Link a JS Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>
